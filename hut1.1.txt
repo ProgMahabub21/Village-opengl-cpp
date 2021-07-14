@@ -1,0 +1,208 @@
+#include <windows.h>  // for MS Windows
+#include <GL/glut.h>  // GLUT, include glu.h and gl.h
+
+/* Handler for window-repaint event. Call back when the window first appears and
+whenever the window needs to be re-painted. */
+void Hut()
+{
+    glBegin(GL_QUADS);
+    glColor3ub(159, 90, 20);
+    glVertex2f(30, 150);
+    glVertex2f(90, 150);
+    glColor3ub(125, 65, 6);
+    glVertex2f(110, 220);
+    glVertex2f(50, 220);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(159, 90, 20);
+    glVertex2f(130, 154);
+    glColor3ub(125, 65, 6);
+    glVertex2f(90, 150);
+    glColor3ub(228, 193, 113);
+    glVertex2f(110, 220);
+    glEnd();
+
+    glLineWidth(10);
+    glBegin(GL_LINES);
+    glColor3ub(125, 65, 6);
+    glVertex2f(110,220);
+    glVertex2f(130,154);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(159, 90, 20);
+    glVertex2f(35, 150);
+    glVertex2f(90, 150);
+    glColor3ub(228, 193, 113);
+    glVertex2f(90, 70);
+    glVertex2f(35, 80);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(159, 90, 20);
+    glVertex2f(130, 154);
+    glVertex2f(90, 150);
+    glColor3ub(228, 193, 113);
+    glVertex2f(90, 70);
+    glVertex2f(130, 80);
+    glEnd();
+
+    glLineWidth(0.5);
+    glBegin(GL_LINES);  //BORDER
+    glColor3ub(0, 0, 0);
+    glVertex2f(90, 150);
+    glVertex2f(90, 70);
+    //glVertex2f(90, 70);
+    //glVertex2f(130, 80);
+    glVertex2f(130, 80);
+    glVertex2f(130, 154);
+    glEnd();
+
+    glBegin(GL_QUADS); //window
+    glColor3ub(243, 237, 65);
+    glVertex2f(45, 150);
+    glVertex2f(80, 150);
+    glVertex2f(80, 95);
+    glVertex2f(45, 100);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(253, 151, 49);
+    glVertex2f(45, 150);
+    glColor3ub(193, 127, 60);
+    glVertex2f(80, 150);
+    glColor3ub(94, 49, 5);
+    glVertex2f(75, 120);
+    glColor3ub(112, 69, 25);
+    glVertex2f(40, 123);
+    glEnd();
+
+    glLineWidth(10);
+    glBegin(GL_LINES);
+    glColor3ub(125, 65, 6);
+    glVertex2f(131,77);
+    glVertex2f(90,67);
+    glEnd();
+
+    glBegin(GL_QUADS); //door
+    glColor3ub(102, 0, 0);
+    glVertex2f(125, 154);
+    glVertex2f(95, 150);
+    glVertex2f(95, 70);
+    glVertex2f(126, 78);
+    glEnd();
+
+    glLineWidth(0.5);
+    glBegin(GL_LINES);  //BORDER
+    glColor3ub(0, 0, 0);
+    glVertex2f(90, 70);
+    glVertex2f(130, 80);
+    glEnd();
+
+    glLineWidth(10); //bamboo
+    glBegin(GL_LINES);
+    glColor3ub(151, 105, 31);
+    glVertex2f(115,112);
+    glVertex2f(115,60);
+    glEnd();
+    glLineWidth(10);
+    glBegin(GL_LINES);
+    glColor3ub(151, 105, 31);
+    glVertex2f(144,115);
+    glVertex2f(144,70);
+    glEnd();
+
+    glBegin(GL_QUADS);  //shed
+    glColor3ub(253, 151, 49);
+    glVertex2f(125, 154);
+    glColor3ub(193, 127, 60);
+    glVertex2f(95, 150);
+    glColor3ub(94, 49, 5);
+    glVertex2f(115, 110);
+    glColor3ub(112, 69, 25);
+    glVertex2f(145, 115);
+    glEnd();
+
+    glLineWidth(13);
+    glBegin(GL_LINES);
+    glColor3ub(125, 65, 6);
+    glVertex2f(35,77);
+    glVertex2f(90,67);
+    glEnd();
+
+    //BORDERS
+
+    glLineWidth(0.5);
+
+    glBegin(GL_LINES); //roof
+    glColor3ub(0, 0, 0);
+    glVertex2f(30, 150);
+    glVertex2f(90, 150);
+    glVertex2f(90, 150);
+    glVertex2f(110, 220);
+    glVertex2f(110, 220);
+    glVertex2f(50, 220);
+    glVertex2f(50, 220);
+    glVertex2f(30, 150);
+    glEnd();
+
+    glBegin(GL_LINES); //roof
+    glColor3ub(0, 0, 0);
+    glVertex2f(130, 154);
+    glVertex2f(90, 150);
+    glVertex2f(90, 150);
+    glVertex2f(110, 220);
+    glEnd();
+
+    glBegin(GL_LINES);  //body
+    glColor3ub(0, 0, 0);
+    glVertex2f(90, 150);
+    glVertex2f(90, 70);
+    glVertex2f(90, 70);
+    glVertex2f(35, 80);
+    glVertex2f(35, 80);
+    glVertex2f(35, 150);
+    glEnd();
+
+    glBegin(GL_LINES); //shed
+    glColor3ub(0, 0, 0);
+    glVertex2f(80, 150);
+    glVertex2f(75, 120);
+    glVertex2f(75, 120);
+    glVertex2f(40, 123);
+    glVertex2f(40, 123);
+    glVertex2f(45, 150);
+    glEnd();
+
+    glBegin(GL_LINES); //shed
+    glColor3ub(0, 0, 0);
+    glVertex2f(95, 150);
+    glVertex2f(115, 110);
+    glVertex2f(115, 110);
+    glVertex2f(145, 115);
+    glVertex2f(145, 115);
+    glVertex2f(125, 154);
+    glEnd();
+
+}
+
+void display() {
+	glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to black and opaque
+	glClear(GL_COLOR_BUFFER_BIT);         // Clear the color buffer (background)
+
+    Hut();
+
+	glFlush();  // Render now
+}
+
+/* Main function: GLUT runs as a console application starting at main()  */
+int main(int argc, char** argv) {
+	glutInit(&argc, argv);                 // Initialize GLUT
+	glutCreateWindow("OpenGL Setup Test"); // Create a window with the given title
+	glutInitWindowSize(320, 320);   // Set the window's initial width & height
+	gluOrtho2D(0, 500, 0, 500);
+	glutDisplayFunc(display); // Register display callback handler for window re-paint
+	glutMainLoop();           // Enter the event-processing loop
+	return 0;
+}
