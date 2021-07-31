@@ -2,7 +2,7 @@
 #include<gl/glut.h>
 #include<math.h>
 
-bool isDay = false;
+bool isDay = true;
 float _angle2 = 1;
 float _angle1 = 1;
 int _carangle = 0;
